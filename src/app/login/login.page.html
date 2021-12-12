@@ -1,0 +1,31 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href='http://www.fontonline.ir/css/BYekan.css' rel='stylesheet' type='text/css'>
+<ion-header class="login-header ion-no-padding ion-no-border">
+  
+    <ion-text color="light">
+      <h1>شرکت تکین کو</h1>
+      <div class="logo-icon">
+        <img src="assets/logo-icon.png" alt="">
+      </div>
+    </ion-text>
+</ion-header>
+<ion-content class="login-page">
+<div class="input-content">
+  <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="input-div">
+      <ion-label><ion-icon name="person-outline"></ion-icon></ion-label>
+      <input type="text" name="username" id="username" formControlName="username" placeholder="username">
+    </div>
+    <div class="input-div">
+      <ion-label><ion-icon name="key-outline"></ion-icon></ion-label>
+      <input type="password" name="password" id="password" formControlName="password" placeholder="password">
+    </div>
+<button type="submit" class="btn-login"><ion-spinner color="light" name="crescent" *ngIf="loading"></ion-spinner><span *ngIf="!loading">Login</span></button>
+<ion-label  color="danger" class="ion-text-center" *ngIf="!authenticated"><h2>username or password is invalid!</h2></ion-label>
+</form>
+</div>
+</ion-content>
+<ion-footer>
+  <ion-label  class="ion-text-center" ><h2>تمامی حقوق این ابزار متعلق به شرکت تکین‌کو می باشد</h2></ion-label>
+</ion-footer>
